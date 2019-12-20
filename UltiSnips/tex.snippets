@@ -44,6 +44,28 @@ def add_row(snip):
 
 endglobal
 
+snippet greek_article "article template including package for greek characters" b
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[LGR]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[greek]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{geometry} \geometry{a4paper, portrait, margin=1in}
+
+\author{$0}
+\title{}
+
+\begin{document}
+\maketitle
+
+\end{document}
+endsnippet
+
 snippet "b(egin)?" "begin{} / end{}" br
 \begin{${1:something}}
 	${0:${VISUAL}}
