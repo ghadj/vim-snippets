@@ -46,14 +46,16 @@ endglobal
 
 snippet greek_article "article template including package for greek characters" b
 \documentclass[10pt,a4paper]{article}
+\usepackage[LGR, T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english, greek]{babel}
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage[LGR]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[greek]{babel}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{palatino}
 
 \usepackage{geometry} \geometry{a4paper, portrait, margin=1in}
 
@@ -63,10 +65,10 @@ snippet greek_article "article template including package for greek characters" 
 \begin{document}
 \maketitle
 
-\textlatin{
-	\bibliographystyle{unsrt}
-	\bibliography{} % bib filename
-}
+\begin{otherlanguage}{english}
+    \bibliographystyle{ieeetr}
+    \bibliography{}
+\end{otherlanguage}
 
 \end{document}
 endsnippet
